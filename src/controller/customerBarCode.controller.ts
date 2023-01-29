@@ -166,7 +166,7 @@ export async function getCustomerBarCodeFilter(
 
     const { page = 1, limit = 12, search = "" } = req.query;
 
-    console.log({ page, limit, search });
+    // console.log({ page, limit, search });
 
     if (
       typeof page === "string" &&
