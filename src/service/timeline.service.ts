@@ -91,13 +91,13 @@ async function createTimelineScheduleJobs(
 
   switch (timelineMsg) {
     case TimelineMsg.WAREHOUSE_URUMQI:
-      message_cn = `货物已达到“9515国际物流有限公司”【乌鲁木齐市】库房`;
+      message_cn = `货物已达到“1991国际物流有限公司”【乌鲁木齐市】库房`;
       message_ru = `Груз прибыл на склад компании【город Урумчи】`;
       message_kz = `Жүк【Үрімші қаласы】 қоймасына келді.`;
       break;
 
     case TimelineMsg.HORGOS:
-      message_cn = `货物已达到“9515国际物流有限公司”【霍尔果斯口岸】`;
+      message_cn = `货物已达到“1991国际物流有限公司”【霍尔果斯口岸】`;
       message_ru = `Груз прибыл на склад компании 【Порт Хоргос】`;
       message_kz = `Жүк【Қорғас порты】 қоймасына келді.`;
       break;
@@ -230,17 +230,17 @@ export async function createTimeLineAfterScan(
   const warehouseMsg = getWareHouseNameInMessage(warehouse);
   const message_cn =
     qrCodeData.type === QrCodeType.CHINA_SIDE
-      ? `货物以从“9515国际物流有限公司”【${warehouseMsg.message_cn}】库房发出，在途中`
-      : `货物已达到“9515国际物流有限公司”哈萨克斯坦【${warehouseMsg.message_cn}】`;
+      ? `货物以从“1991国际物流有限公司”【${warehouseMsg.message_cn}】库房发出，在途中`
+      : `货物已达到“1991国际物流有限公司”哈萨克斯坦【${warehouseMsg.message_cn}】`;
   const message_ru =
     qrCodeData.type === QrCodeType.CHINA_SIDE
-      ? `Груз был отправлен со склада «9515 Международная логистическая компания, ТОО»【${warehouseMsg.message_ru}】`
-      : `Груз прибыл в Казахстан, «9515 Международная логистическая компания, ТОО»【${warehouseMsg.message_ru}】`;
+      ? `Груз прибыл на склад компании【${warehouseMsg.message_ru}】`
+      : `Груз прибыл в Казахстан, «1991 Международная логистическая компания, ТОО»【${warehouseMsg.message_ru}】`;
 
   const message_kz =
     qrCodeData.type === QrCodeType.CHINA_SIDE
-      ? `Жүк «9515 халықаралық логистикалық компания, ЖШС» қоймасынан жөнелтілді.【${warehouseMsg.message_kz}】`
-      : `Жүк Қазақстанға келді, «9515 халықаралық логистикалық компания, ЖШС»【${warehouseMsg.message_kz}】`;
+      ? `Жүк «1991 халықаралық логистикалық компания, ЖШС» қоймасынан жөнелтілді.【${warehouseMsg.message_kz}】`
+      : `Жүк Қазақстанға келді, «1991 халықаралық логистикалық компания, ЖШС»【${warehouseMsg.message_kz}】`;
 
   // if (
   //   qrCodeData.type === QrCodeType.KAZAKHSTAN_SIDE &&

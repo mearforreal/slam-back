@@ -132,15 +132,15 @@ export async function deleteCustomerBarCodeHandler(
       return res.sendStatus(404);
     }
 
-    const barCodeRegistered = await findOrder({
-      barCode: customerBarCode.barCode,
-    });
+    // const barCodeRegistered = await findOrder({
+    //   barCode: customerBarCode.barCode,
+    // });
 
-    if (!!barCodeRegistered) {
-      return res
-        .status(400)
-        .send({ message: "Штрих-код был импортирован и нельзя удалить" });
-    }
+    // if (!!barCodeRegistered) {
+    //   return res
+    //     .status(400)
+    //     .send({ message: "Штрих-код был импортирован и нельзя удалить" });
+    // }
 
     if (customerBarCode.customer.toString() !== customerId) {
       return res.sendStatus(403);

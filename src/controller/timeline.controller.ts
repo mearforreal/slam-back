@@ -20,6 +20,10 @@ import {
 import log from "../utils/logger";
 import { Socket } from "../utils/socket";
 
+// export async function fixHnadler(){
+
+// }
+
 export async function fetchOrderTimelineHandler(req: Request, res: Response) {
   try {
     let { order, barcode } = req.query;
@@ -118,13 +122,13 @@ export async function createTimeLineAfterScanHandler(
     //       subject: `货物已发送【${orderGroup.createdAt}】`,
     //       // text:"qwe",
     //       html: `<h1>哈萨克斯坦库房二维码 【${orderGroup.createdAt}】</h1>
-    //         <img src="https://api9515cargo.com/api/qrCode/${qrCode.img}">
+    //         <img src="https://api1991cargo.com/api/qrCode/${qrCode.img}">
     //         </div>`,
     //       attachments: [
     //         {
     //           filename: qrCode.img,
     //           path: path.join(__dirname, `../assets/${qrCode.img}`),
-    //           cid: `https://api9515cargo.com/api/qrCode/${qrCode.img}`, //same cid value as in the html img src
+    //           cid: `https://api1991cargo.com/api/qrCode/${qrCode.img}`, //same cid value as in the html img src
     //         },
     //       ],
     //     })

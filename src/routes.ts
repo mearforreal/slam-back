@@ -245,11 +245,11 @@ function routes(app: Express) {
   );
 
   //deleteCustomerBarCodeHandler
-  // app.delete(
-  //   "/api/customer-barCode/:customerId/:customerBarCodeId",
-  //   [isVerified, validateResource(deleteCustomerBarCodeSchema)],
-  //   deleteCustomerBarCodeHandler
-  // );
+  app.delete(
+    "/api/customer-barCode/:customerBarCodeId",
+    [isVerified, validateResource(deleteCustomerBarCodeSchema)],
+    deleteCustomerBarCodeHandler
+  );
 
   //getCustomerBarCodeFilter
   app.get(
