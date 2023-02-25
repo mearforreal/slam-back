@@ -28,8 +28,8 @@ app.use(express.json());
 app.use(deserializeUser);
 app.use(
   cors({
-    //origin: "https://1991logistics.com",
-    origin: "http://localhost:3000",
+    origin: "https://1991logistics.com",
+    //origin: "http://localhost:3000",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
   })
 );
@@ -37,8 +37,8 @@ app.use(
 app.options(
   "*",
   cors({
-    //origin: "https://1991logistics.com",
-    origin: "http://localhost:3000",
+    origin: "https://1991logistics.com",
+    //origin: "http://localhost:3000",
   })
 );
 
